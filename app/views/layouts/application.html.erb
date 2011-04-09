@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+	
+		<title><%= title %></title>
+		
+    <%= csrf_meta_tag %>
+
+		<%= render 'layouts/styleSheets' %>
+		
+  </head>
+
+  <body id="container" class="site"> <!-- Container ID for grids layout from Yahoo UI -->
+	
+		<%= render 'pages/header' %>
+		
+		<section class="yui3-g round">
+			<%= render 'layouts/tabs' %>
+			<%= render 'pages/practice' %>
+		</section>
+		
+		<%= render 'pages/footer' %>
+
+		<%= render 'layouts/javaScripts' %>
+		
+		<%= debug(params) if Rails.env.development? %>
+		
+  </body>
+
+</html>
